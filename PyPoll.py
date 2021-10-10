@@ -8,8 +8,15 @@
 # Charles Casper Stockham, Diana DeGette, Raymon Anthony Doane
 
 # Total number of votes each candidate received
+# The total number of votes per candidate was:
+# Charles Casper Stockham': 85213, 'Diana DeGette': 272892, 'Raymon Anthony Doane': 11606
+  
 # Percentage of votes each candidate won
-# The winner of the election based on popular vote
+#Charles Casper Stockham: received 23.04854332167558% of the vote.
+# Diana DeGette: received 73.81224794501652% of the vote.
+# Raymon Anthony Doane: received 3.1392087333079077% of the vote.
+
+# The winner of the election based on popular vote is Diana DeGette
 
 # Add our dependencies.
 import csv
@@ -56,6 +63,17 @@ with open(file_to_load) as election_data:
 
         # Add a vote to that candidate's count.
         candidate_votes[candidate_name] += 1
+
+        # Determine the percentage of votes for each candidate by looping through the counts.
+        # Iterate through the candidate list.
+        for candidate_name in candidate_votes:
+            # Retrieve vote count of a candidate.
+            votes = candidate_votes[candidate_name]
+            # Calculate the percentage of votes.
+            vote_percentage = float(votes) / float(total_votes) * 100
+            # Print the candidate name and percentage of votes.
+            print(f"{candidate_name}: received {vote_percentage}% of the vote.")
+
 
 # Print the candidate list.
 print(candidate_votes) 
