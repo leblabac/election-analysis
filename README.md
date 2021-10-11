@@ -25,4 +25,7 @@ The election audit returned the following results:
 
 Based on the vote tally, Diana DeGette wins the popular vote with a total of 73.8% of the vote, totaling 272,892 votes.
 
-## Election-Audit Summary
+## Challenge Overview
+
+
+## Challenge Summary
